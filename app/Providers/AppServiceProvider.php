@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // FIX for: "Syntax error or access violation: 1071 Specified key was too long"
+        \Illuminate\Support\Facades\Schema::defaultStringLength(191);
     }
 
     /**

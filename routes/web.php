@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('homepage');
+})->name('homepage');
+
+
+
+Auth::routes();
+
+
+Route::get('/index', function () {
+    return view('hero/index');
+})->name('index');
